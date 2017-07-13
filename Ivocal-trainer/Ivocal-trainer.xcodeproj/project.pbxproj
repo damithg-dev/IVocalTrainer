@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64DEE2AD1F17B846008EB9BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2AC1F17B846008EB9BE /* main.m */; };
+		64DEE2B01F17B846008EB9BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2AF1F17B846008EB9BE /* AppDelegate.m */; };
+		64DEE2B31F17B846008EB9BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2B21F17B846008EB9BE /* ViewController.m */; };
+		64DEE2B61F17B846008EB9BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DEE2B41F17B846008EB9BE /* Main.storyboard */; };
+		64DEE2B81F17B846008EB9BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DEE2B71F17B846008EB9BE /* Assets.xcassets */; };
+		64DEE2BB1F17B846008EB9BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DEE2B91F17B846008EB9BE /* LaunchScreen.storyboard */; };
+		64DEE2C61F17B846008EB9BE /* Ivocal_trainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2C51F17B846008EB9BE /* Ivocal_trainerTests.m */; };
+		64DEE2D11F17B846008EB9BE /* Ivocal_trainerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2D01F17B846008EB9BE /* Ivocal_trainerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64DEE2C21F17B846008EB9BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64DEE2A01F17B846008EB9BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64DEE2A71F17B846008EB9BE;
+			remoteInfo = "Ivocal-trainer";
+		};
+		64DEE2CD1F17B846008EB9BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64DEE2A01F17B846008EB9BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64DEE2A71F17B846008EB9BE;
+			remoteInfo = "Ivocal-trainer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		64DEE2A81F17B846008EB9BE /* Ivocal-trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ivocal-trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64DEE2AC1F17B846008EB9BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		64DEE2AE1F17B846008EB9BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		64DEE2AF1F17B846008EB9BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		64DEE2B11F17B846008EB9BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		64DEE2B21F17B846008EB9BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		64DEE2B51F17B846008EB9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		64DEE2B71F17B846008EB9BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64DEE2BA1F17B846008EB9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		64DEE2BC1F17B846008EB9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64DEE2C11F17B846008EB9BE /* Ivocal-trainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ivocal-trainerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64DEE2C51F17B846008EB9BE /* Ivocal_trainerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ivocal_trainerTests.m; sourceTree = "<group>"; };
+		64DEE2C71F17B846008EB9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64DEE2CC1F17B846008EB9BE /* Ivocal-trainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ivocal-trainerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64DEE2D01F17B846008EB9BE /* Ivocal_trainerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ivocal_trainerUITests.m; sourceTree = "<group>"; };
+		64DEE2D21F17B846008EB9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64DEE2A51F17B846008EB9BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DEE2BE1F17B846008EB9BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DEE2C91F17B846008EB9BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64DEE29F1F17B846008EB9BE = {
+			isa = PBXGroup;
+			children = (
+				64DEE2AA1F17B846008EB9BE /* Ivocal-trainer */,
+				64DEE2C41F17B846008EB9BE /* Ivocal-trainerTests */,
+				64DEE2CF1F17B846008EB9BE /* Ivocal-trainerUITests */,
+				64DEE2A91F17B846008EB9BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64DEE2A91F17B846008EB9BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64DEE2A81F17B846008EB9BE /* Ivocal-trainer.app */,
+				64DEE2C11F17B846008EB9BE /* Ivocal-trainerTests.xctest */,
+				64DEE2CC1F17B846008EB9BE /* Ivocal-trainerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64DEE2AA1F17B846008EB9BE /* Ivocal-trainer */ = {
+			isa = PBXGroup;
+			children = (
+				64DEE2AE1F17B846008EB9BE /* AppDelegate.h */,
+				64DEE2AF1F17B846008EB9BE /* AppDelegate.m */,
+				64DEE2B11F17B846008EB9BE /* ViewController.h */,
+				64DEE2B21F17B846008EB9BE /* ViewController.m */,
+				64DEE2B41F17B846008EB9BE /* Main.storyboard */,
+				64DEE2B71F17B846008EB9BE /* Assets.xcassets */,
+				64DEE2B91F17B846008EB9BE /* LaunchScreen.storyboard */,
+				64DEE2BC1F17B846008EB9BE /* Info.plist */,
+				64DEE2AB1F17B846008EB9BE /* Supporting Files */,
+			);
+			path = "Ivocal-trainer";
+			sourceTree = "<group>";
+		};
+		64DEE2AB1F17B846008EB9BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				64DEE2AC1F17B846008EB9BE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		64DEE2C41F17B846008EB9BE /* Ivocal-trainerTests */ = {
+			isa = PBXGroup;
+			children = (
+				64DEE2C51F17B846008EB9BE /* Ivocal_trainerTests.m */,
+				64DEE2C71F17B846008EB9BE /* Info.plist */,
+			);
+			path = "Ivocal-trainerTests";
+			sourceTree = "<group>";
+		};
+		64DEE2CF1F17B846008EB9BE /* Ivocal-trainerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				64DEE2D01F17B846008EB9BE /* Ivocal_trainerUITests.m */,
+				64DEE2D21F17B846008EB9BE /* Info.plist */,
+			);
+			path = "Ivocal-trainerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64DEE2A71F17B846008EB9BE /* Ivocal-trainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64DEE2D51F17B846008EB9BE /* Build configuration list for PBXNativeTarget "Ivocal-trainer" */;
+			buildPhases = (
+				64DEE2A41F17B846008EB9BE /* Sources */,
+				64DEE2A51F17B846008EB9BE /* Frameworks */,
+				64DEE2A61F17B846008EB9BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ivocal-trainer";
+			productName = "Ivocal-trainer";
+			productReference = 64DEE2A81F17B846008EB9BE /* Ivocal-trainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		64DEE2C01F17B846008EB9BE /* Ivocal-trainerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64DEE2D81F17B846008EB9BE /* Build configuration list for PBXNativeTarget "Ivocal-trainerTests" */;
+			buildPhases = (
+				64DEE2BD1F17B846008EB9BE /* Sources */,
+				64DEE2BE1F17B846008EB9BE /* Frameworks */,
+				64DEE2BF1F17B846008EB9BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64DEE2C31F17B846008EB9BE /* PBXTargetDependency */,
+			);
+			name = "Ivocal-trainerTests";
+			productName = "Ivocal-trainerTests";
+			productReference = 64DEE2C11F17B846008EB9BE /* Ivocal-trainerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		64DEE2CB1F17B846008EB9BE /* Ivocal-trainerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64DEE2DB1F17B846008EB9BE /* Build configuration list for PBXNativeTarget "Ivocal-trainerUITests" */;
+			buildPhases = (
+				64DEE2C81F17B846008EB9BE /* Sources */,
+				64DEE2C91F17B846008EB9BE /* Frameworks */,
+				64DEE2CA1F17B846008EB9BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64DEE2CE1F17B846008EB9BE /* PBXTargetDependency */,
+			);
+			name = "Ivocal-trainerUITests";
+			productName = "Ivocal-trainerUITests";
+			productReference = 64DEE2CC1F17B846008EB9BE /* Ivocal-trainerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64DEE2A01F17B846008EB9BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Gayanath Damith Amarasinghe";
+				TargetAttributes = {
+					64DEE2A71F17B846008EB9BE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4CNF6CA6XD;
+						ProvisioningStyle = Automatic;
+					};
+					64DEE2C01F17B846008EB9BE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4CNF6CA6XD;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 64DEE2A71F17B846008EB9BE;
+					};
+					64DEE2CB1F17B846008EB9BE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4CNF6CA6XD;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 64DEE2A71F17B846008EB9BE;
+					};
+				};
+			};
+			buildConfigurationList = 64DEE2A31F17B846008EB9BE /* Build configuration list for PBXProject "Ivocal-trainer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64DEE29F1F17B846008EB9BE;
+			productRefGroup = 64DEE2A91F17B846008EB9BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64DEE2A71F17B846008EB9BE /* Ivocal-trainer */,
+				64DEE2C01F17B846008EB9BE /* Ivocal-trainerTests */,
+				64DEE2CB1F17B846008EB9BE /* Ivocal-trainerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64DEE2A61F17B846008EB9BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64DEE2BB1F17B846008EB9BE /* LaunchScreen.storyboard in Resources */,
+				64DEE2B81F17B846008EB9BE /* Assets.xcassets in Resources */,
+				64DEE2B61F17B846008EB9BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DEE2BF1F17B846008EB9BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DEE2CA1F17B846008EB9BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64DEE2A41F17B846008EB9BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64DEE2B31F17B846008EB9BE /* ViewController.m in Sources */,
+				64DEE2B01F17B846008EB9BE /* AppDelegate.m in Sources */,
+				64DEE2AD1F17B846008EB9BE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DEE2BD1F17B846008EB9BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64DEE2C61F17B846008EB9BE /* Ivocal_trainerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64DEE2C81F17B846008EB9BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64DEE2D11F17B846008EB9BE /* Ivocal_trainerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64DEE2C31F17B846008EB9BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64DEE2A71F17B846008EB9BE /* Ivocal-trainer */;
+			targetProxy = 64DEE2C21F17B846008EB9BE /* PBXContainerItemProxy */;
+		};
+		64DEE2CE1F17B846008EB9BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64DEE2A71F17B846008EB9BE /* Ivocal-trainer */;
+			targetProxy = 64DEE2CD1F17B846008EB9BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		64DEE2B41F17B846008EB9BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64DEE2B51F17B846008EB9BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		64DEE2B91F17B846008EB9BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64DEE2BA1F17B846008EB9BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64DEE2D31F17B846008EB9BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		64DEE2D41F17B846008EB9BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64DEE2D61F17B846008EB9BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4CNF6CA6XD;
+				INFOPLIST_FILE = "Ivocal-trainer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Gayanath-Damith-Amarasinghe.Ivocal-trainer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		64DEE2D71F17B846008EB9BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4CNF6CA6XD;
+				INFOPLIST_FILE = "Ivocal-trainer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Gayanath-Damith-Amarasinghe.Ivocal-trainer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		64DEE2D91F17B846008EB9BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4CNF6CA6XD;
+				INFOPLIST_FILE = "Ivocal-trainerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Gayanath-Damith-Amarasinghe.Ivocal-trainerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ivocal-trainer.app/Ivocal-trainer";
+			};
+			name = Debug;
+		};
+		64DEE2DA1F17B846008EB9BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4CNF6CA6XD;
+				INFOPLIST_FILE = "Ivocal-trainerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Gayanath-Damith-Amarasinghe.Ivocal-trainerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ivocal-trainer.app/Ivocal-trainer";
+			};
+			name = Release;
+		};
+		64DEE2DC1F17B846008EB9BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4CNF6CA6XD;
+				INFOPLIST_FILE = "Ivocal-trainerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Gayanath-Damith-Amarasinghe.Ivocal-trainerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Ivocal-trainer";
+			};
+			name = Debug;
+		};
+		64DEE2DD1F17B846008EB9BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4CNF6CA6XD;
+				INFOPLIST_FILE = "Ivocal-trainerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Gayanath-Damith-Amarasinghe.Ivocal-trainerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Ivocal-trainer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64DEE2A31F17B846008EB9BE /* Build configuration list for PBXProject "Ivocal-trainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64DEE2D31F17B846008EB9BE /* Debug */,
+				64DEE2D41F17B846008EB9BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64DEE2D51F17B846008EB9BE /* Build configuration list for PBXNativeTarget "Ivocal-trainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64DEE2D61F17B846008EB9BE /* Debug */,
+				64DEE2D71F17B846008EB9BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		64DEE2D81F17B846008EB9BE /* Build configuration list for PBXNativeTarget "Ivocal-trainerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64DEE2D91F17B846008EB9BE /* Debug */,
+				64DEE2DA1F17B846008EB9BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		64DEE2DB1F17B846008EB9BE /* Build configuration list for PBXNativeTarget "Ivocal-trainerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64DEE2DC1F17B846008EB9BE /* Debug */,
+				64DEE2DD1F17B846008EB9BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64DEE2A01F17B846008EB9BE /* Project object */;
+}
