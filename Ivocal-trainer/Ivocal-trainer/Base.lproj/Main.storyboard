@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="trp-B0-pso">
             <objects>
-                <viewController id="Znh-ZW-jWa" sceneMemberID="viewController">
+                <viewController id="Znh-ZW-jWa" customClass="DashboardView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xtN-fB-E7o"/>
                         <viewControllerLayoutGuide type="bottom" id="uuE-Rm-enV"/>
@@ -22,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="n6j-el-Wpv"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="tab_home_ic" id="n6j-el-Wpv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8D-IB-vHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="-1218"/>
         </scene>
-        <!--Item-->
+        <!--Music-->
         <scene sceneID="5Hg-Us-Vsf">
             <objects>
-                <viewController id="dbS-0a-P2l" sceneMemberID="viewController">
+                <viewController id="dbS-0a-P2l" customClass="PlayListView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tEQ-vz-bfa"/>
                         <viewControllerLayoutGuide type="bottom" id="bVq-CY-7T7"/>
@@ -41,16 +41,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ujd-V9-1Jb"/>
+                    <tabBarItem key="tabBarItem" title="Music" image="tab_songs_ic" id="ujd-V9-1Jb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bih-wN-wIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="-519"/>
         </scene>
-        <!--Item-->
+        <!--Game-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FBLoginView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -60,16 +60,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="QPQ-99-ijv"/>
+                    <tabBarItem key="tabBarItem" title="Game" image="tab_fb_ic" id="QPQ-99-ijv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="IV9-GN-1mP">
             <objects>
-                <viewController id="Kfa-6X-bng" sceneMemberID="viewController">
+                <viewController id="Kfa-6X-bng" customClass="ProfileView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6QM-0F-xZW"/>
                         <viewControllerLayoutGuide type="bottom" id="mkc-Ze-CrD"/>
@@ -79,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="nSu-dj-Jfc"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="tab_profile_ic" id="nSu-dj-Jfc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nz2-t6-h26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,14 +91,15 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hVw-I8-P9A" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="X1c-DO-Snu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="BXW-da-NJ4"/>
-                        <segue destination="dbS-0a-P2l" kind="relationship" relationship="viewControllers" id="8HD-Ua-BdH"/>
-                        <segue destination="Kfa-6X-bng" kind="relationship" relationship="viewControllers" id="XDc-N6-8sn"/>
                         <segue destination="Znh-ZW-jWa" kind="relationship" relationship="viewControllers" id="WvJ-q3-eGK"/>
+                        <segue destination="dbS-0a-P2l" kind="relationship" relationship="viewControllers" id="8HD-Ua-BdH"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="BXW-da-NJ4"/>
+                        <segue destination="Kfa-6X-bng" kind="relationship" relationship="viewControllers" id="XDc-N6-8sn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vE7-c3-omk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -106,4 +107,10 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab_fb_ic" width="30" height="30"/>
+        <image name="tab_home_ic" width="30" height="30"/>
+        <image name="tab_profile_ic" width="30" height="30"/>
+        <image name="tab_songs_ic" width="30" height="30"/>
+    </resources>
 </document>

@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12CC4EDDC1D876AE0185D35B /* Pods_Ivocal_trainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B5E52EB67730A3CA5BEEB7 /* Pods_Ivocal_trainer.framework */; };
 		64DEE2AD1F17B846008EB9BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2AC1F17B846008EB9BE /* main.m */; };
 		64DEE2B01F17B846008EB9BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2AF1F17B846008EB9BE /* AppDelegate.m */; };
-		64DEE2B31F17B846008EB9BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2B21F17B846008EB9BE /* ViewController.m */; };
 		64DEE2B61F17B846008EB9BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DEE2B41F17B846008EB9BE /* Main.storyboard */; };
 		64DEE2B81F17B846008EB9BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DEE2B71F17B846008EB9BE /* Assets.xcassets */; };
 		64DEE2BB1F17B846008EB9BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DEE2B91F17B846008EB9BE /* LaunchScreen.storyboard */; };
 		64DEE2C61F17B846008EB9BE /* Ivocal_trainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2C51F17B846008EB9BE /* Ivocal_trainerTests.m */; };
 		64DEE2D11F17B846008EB9BE /* Ivocal_trainerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2D01F17B846008EB9BE /* Ivocal_trainerUITests.m */; };
+		64DEE2E61F17BA4B008EB9BE /* FBLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2E51F17BA4B008EB9BE /* FBLoginView.m */; };
+		64DEE2E91F17BA6C008EB9BE /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2E81F17BA6C008EB9BE /* ProfileView.m */; };
+		64DEE2EC1F17BA8D008EB9BE /* PlayListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2EB1F17BA8D008EB9BE /* PlayListView.m */; };
+		64DEE2EF1F17BB03008EB9BE /* DashboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2EE1F17BB03008EB9BE /* DashboardView.m */; };
+		6D56D70A85471C099A4BA3BD /* Pods_Ivocal_trainerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273ECE4880700B1323E994AE /* Pods_Ivocal_trainerTests.framework */; };
+		F355AE955C8C1B7BB4FF4146 /* Pods_Ivocal_trainerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6197D2E026A0A9F78156E8A /* Pods_Ivocal_trainerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011B7C39774A86CB5A4D6309 /* Pods-Ivocal-trainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainer/Pods-Ivocal-trainer.debug.xcconfig"; sourceTree = "<group>"; };
+		273ECE4880700B1323E994AE /* Pods_Ivocal_trainerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ivocal_trainerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DEE2A81F17B846008EB9BE /* Ivocal-trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ivocal-trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DEE2AC1F17B846008EB9BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		64DEE2AE1F17B846008EB9BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		64DEE2AF1F17B846008EB9BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		64DEE2B11F17B846008EB9BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		64DEE2B21F17B846008EB9BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		64DEE2B51F17B846008EB9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64DEE2B71F17B846008EB9BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64DEE2BA1F17B846008EB9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +57,21 @@
 		64DEE2CC1F17B846008EB9BE /* Ivocal-trainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ivocal-trainerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DEE2D01F17B846008EB9BE /* Ivocal_trainerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ivocal_trainerUITests.m; sourceTree = "<group>"; };
 		64DEE2D21F17B846008EB9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64DEE2E41F17BA4B008EB9BE /* FBLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBLoginView.h; path = "Social Media/FBLoginView.h"; sourceTree = "<group>"; };
+		64DEE2E51F17BA4B008EB9BE /* FBLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBLoginView.m; path = "Social Media/FBLoginView.m"; sourceTree = "<group>"; };
+		64DEE2E71F17BA6C008EB9BE /* ProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileView.h; path = Profile/ProfileView.h; sourceTree = "<group>"; };
+		64DEE2E81F17BA6C008EB9BE /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileView.m; path = Profile/ProfileView.m; sourceTree = "<group>"; };
+		64DEE2EA1F17BA8D008EB9BE /* PlayListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayListView.h; path = Songs/PlayListView.h; sourceTree = "<group>"; };
+		64DEE2EB1F17BA8D008EB9BE /* PlayListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayListView.m; path = Songs/PlayListView.m; sourceTree = "<group>"; };
+		64DEE2ED1F17BB03008EB9BE /* DashboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardView.h; path = Home/DashboardView.h; sourceTree = "<group>"; };
+		64DEE2EE1F17BB03008EB9BE /* DashboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardView.m; path = Home/DashboardView.m; sourceTree = "<group>"; };
+		76C5C5176D2F32B0679B5419 /* Pods-Ivocal-trainerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainerTests/Pods-Ivocal-trainerTests.release.xcconfig"; sourceTree = "<group>"; };
+		79F9C9E85A93892EE845FAD9 /* Pods-Ivocal-trainerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainerUITests/Pods-Ivocal-trainerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6DB8BF6ACD9DF06B0035683 /* Pods-Ivocal-trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainer/Pods-Ivocal-trainer.release.xcconfig"; sourceTree = "<group>"; };
+		B6197D2E026A0A9F78156E8A /* Pods_Ivocal_trainerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ivocal_trainerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9B5E52EB67730A3CA5BEEB7 /* Pods_Ivocal_trainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ivocal_trainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E04D0CF6FC90B79DEA1CDEAA /* Pods-Ivocal-trainerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainerUITests/Pods-Ivocal-trainerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F5CA33A433FAC1F3563FA628 /* Pods-Ivocal-trainerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainerTests/Pods-Ivocal-trainerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12CC4EDDC1D876AE0185D35B /* Pods_Ivocal_trainer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D56D70A85471C099A4BA3BD /* Pods_Ivocal_trainerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +95,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F355AE955C8C1B7BB4FF4146 /* Pods_Ivocal_trainerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0160011A3E5345BA339E67F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				011B7C39774A86CB5A4D6309 /* Pods-Ivocal-trainer.debug.xcconfig */,
+				A6DB8BF6ACD9DF06B0035683 /* Pods-Ivocal-trainer.release.xcconfig */,
+				F5CA33A433FAC1F3563FA628 /* Pods-Ivocal-trainerTests.debug.xcconfig */,
+				76C5C5176D2F32B0679B5419 /* Pods-Ivocal-trainerTests.release.xcconfig */,
+				79F9C9E85A93892EE845FAD9 /* Pods-Ivocal-trainerUITests.debug.xcconfig */,
+				E04D0CF6FC90B79DEA1CDEAA /* Pods-Ivocal-trainerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		369DAB0971B698674961BA02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9B5E52EB67730A3CA5BEEB7 /* Pods_Ivocal_trainer.framework */,
+				273ECE4880700B1323E994AE /* Pods_Ivocal_trainerTests.framework */,
+				B6197D2E026A0A9F78156E8A /* Pods_Ivocal_trainerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		64DEE29F1F17B846008EB9BE = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +132,8 @@
 				64DEE2C41F17B846008EB9BE /* Ivocal-trainerTests */,
 				64DEE2CF1F17B846008EB9BE /* Ivocal-trainerUITests */,
 				64DEE2A91F17B846008EB9BE /* Products */,
+				0160011A3E5345BA339E67F1 /* Pods */,
+				369DAB0971B698674961BA02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +150,12 @@
 		64DEE2AA1F17B846008EB9BE /* Ivocal-trainer */ = {
 			isa = PBXGroup;
 			children = (
+				64DEE2E31F17BA12008EB9BE /* Profile */,
+				64DEE2E21F17BA09008EB9BE /* Social media */,
+				64DEE2E11F17B9FB008EB9BE /* Songs */,
+				64DEE2DE1F17B9DA008EB9BE /* Home */,
 				64DEE2AE1F17B846008EB9BE /* AppDelegate.h */,
 				64DEE2AF1F17B846008EB9BE /* AppDelegate.m */,
-				64DEE2B11F17B846008EB9BE /* ViewController.h */,
-				64DEE2B21F17B846008EB9BE /* ViewController.m */,
 				64DEE2B41F17B846008EB9BE /* Main.storyboard */,
 				64DEE2B71F17B846008EB9BE /* Assets.xcassets */,
 				64DEE2B91F17B846008EB9BE /* LaunchScreen.storyboard */,
@@ -140,6 +191,42 @@
 			path = "Ivocal-trainerUITests";
 			sourceTree = "<group>";
 		};
+		64DEE2DE1F17B9DA008EB9BE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				64DEE2ED1F17BB03008EB9BE /* DashboardView.h */,
+				64DEE2EE1F17BB03008EB9BE /* DashboardView.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		64DEE2E11F17B9FB008EB9BE /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				64DEE2EA1F17BA8D008EB9BE /* PlayListView.h */,
+				64DEE2EB1F17BA8D008EB9BE /* PlayListView.m */,
+			);
+			name = Songs;
+			sourceTree = "<group>";
+		};
+		64DEE2E21F17BA09008EB9BE /* Social media */ = {
+			isa = PBXGroup;
+			children = (
+				64DEE2E41F17BA4B008EB9BE /* FBLoginView.h */,
+				64DEE2E51F17BA4B008EB9BE /* FBLoginView.m */,
+			);
+			name = "Social media";
+			sourceTree = "<group>";
+		};
+		64DEE2E31F17BA12008EB9BE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				64DEE2E71F17BA6C008EB9BE /* ProfileView.h */,
+				64DEE2E81F17BA6C008EB9BE /* ProfileView.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64DEE2D51F17B846008EB9BE /* Build configuration list for PBXNativeTarget "Ivocal-trainer" */;
 			buildPhases = (
+				B5CA57D877F349144DE41A56 /* [CP] Check Pods Manifest.lock */,
 				64DEE2A41F17B846008EB9BE /* Sources */,
 				64DEE2A51F17B846008EB9BE /* Frameworks */,
 				64DEE2A61F17B846008EB9BE /* Resources */,
+				CA4DADD9F7B36713C5495AB8 /* [CP] Embed Pods Frameworks */,
+				A5F1BE1E6814E6D545F26D20 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64DEE2D81F17B846008EB9BE /* Build configuration list for PBXNativeTarget "Ivocal-trainerTests" */;
 			buildPhases = (
+				E4BC70427351CF6C04A5A1B0 /* [CP] Check Pods Manifest.lock */,
 				64DEE2BD1F17B846008EB9BE /* Sources */,
 				64DEE2BE1F17B846008EB9BE /* Frameworks */,
 				64DEE2BF1F17B846008EB9BE /* Resources */,
+				89E4A28A516ED78F68D7AFED /* [CP] Embed Pods Frameworks */,
+				7FA07BCF9F1DCF4C8834461F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64DEE2DB1F17B846008EB9BE /* Build configuration list for PBXNativeTarget "Ivocal-trainerUITests" */;
 			buildPhases = (
+				676EBA1D24DAD8800A3F0501 /* [CP] Check Pods Manifest.lock */,
 				64DEE2C81F17B846008EB9BE /* Sources */,
 				64DEE2C91F17B846008EB9BE /* Frameworks */,
 				64DEE2CA1F17B846008EB9BE /* Resources */,
+				2323C99A0C7823D1693506CA /* [CP] Embed Pods Frameworks */,
+				E87810D8BA056514A4A57333 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,12 +367,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2323C99A0C7823D1693506CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ivocal-trainerUITests/Pods-Ivocal-trainerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		676EBA1D24DAD8800A3F0501 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7FA07BCF9F1DCF4C8834461F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ivocal-trainerTests/Pods-Ivocal-trainerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89E4A28A516ED78F68D7AFED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ivocal-trainerTests/Pods-Ivocal-trainerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5F1BE1E6814E6D545F26D20 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ivocal-trainer/Pods-Ivocal-trainer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5CA57D877F349144DE41A56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CA4DADD9F7B36713C5495AB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ivocal-trainer/Pods-Ivocal-trainer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4BC70427351CF6C04A5A1B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E87810D8BA056514A4A57333 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ivocal-trainerUITests/Pods-Ivocal-trainerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		64DEE2A41F17B846008EB9BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64DEE2B31F17B846008EB9BE /* ViewController.m in Sources */,
+				64DEE2E91F17BA6C008EB9BE /* ProfileView.m in Sources */,
+				64DEE2EF1F17BB03008EB9BE /* DashboardView.m in Sources */,
+				64DEE2EC1F17BA8D008EB9BE /* PlayListView.m in Sources */,
+				64DEE2E61F17BA4B008EB9BE /* FBLoginView.m in Sources */,
 				64DEE2B01F17B846008EB9BE /* AppDelegate.m in Sources */,
 				64DEE2AD1F17B846008EB9BE /* main.m in Sources */,
 			);
@@ -425,6 +662,7 @@
 		};
 		64DEE2D61F17B846008EB9BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 011B7C39774A86CB5A4D6309 /* Pods-Ivocal-trainer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4CNF6CA6XD;
@@ -437,6 +675,7 @@
 		};
 		64DEE2D71F17B846008EB9BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6DB8BF6ACD9DF06B0035683 /* Pods-Ivocal-trainer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4CNF6CA6XD;
@@ -449,6 +688,7 @@
 		};
 		64DEE2D91F17B846008EB9BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5CA33A433FAC1F3563FA628 /* Pods-Ivocal-trainerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 4CNF6CA6XD;
@@ -462,6 +702,7 @@
 		};
 		64DEE2DA1F17B846008EB9BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76C5C5176D2F32B0679B5419 /* Pods-Ivocal-trainerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 4CNF6CA6XD;
@@ -475,6 +716,7 @@
 		};
 		64DEE2DC1F17B846008EB9BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79F9C9E85A93892EE845FAD9 /* Pods-Ivocal-trainerUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 4CNF6CA6XD;
 				INFOPLIST_FILE = "Ivocal-trainerUITests/Info.plist";
@@ -487,6 +729,7 @@
 		};
 		64DEE2DD1F17B846008EB9BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E04D0CF6FC90B79DEA1CDEAA /* Pods-Ivocal-trainerUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 4CNF6CA6XD;
 				INFOPLIST_FILE = "Ivocal-trainerUITests/Info.plist";
@@ -516,6 +759,7 @@
 				64DEE2D71F17B846008EB9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64DEE2D81F17B846008EB9BE /* Build configuration list for PBXNativeTarget "Ivocal-trainerTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +768,7 @@
 				64DEE2DA1F17B846008EB9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64DEE2DB1F17B846008EB9BE /* Build configuration list for PBXNativeTarget "Ivocal-trainerUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +777,7 @@
 				64DEE2DD1F17B846008EB9BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
