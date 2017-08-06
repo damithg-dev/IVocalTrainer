@@ -8,19 +8,30 @@
 
 #import "FBLoginView.h"
 
-@interface FBLoginView ()
+@interface FBLoginView (){
+
+    FBSDKLoginButton *loginButton;
+}
 
 @end
 
 @implementation FBLoginView
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    // Optional: Place the button in the center of your view.
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
-
+    
+    
+    loginButton = [[FBSDKLoginButton alloc] init];
+    loginButton.readPermissions =@[@"public_profile", @"email", @"user_friends"];
+    loginButton.hidden = true;
+}
+- (IBAction)loginButtonPressed:(id)sender {
+     [loginButton sendActionsForControlEvents: UIControlEventTouchUpInside];
+    
+    if ([FBSDKAccessToken currentAccessToken]) {
+        NSLog(@"token %@",[FBSDKAccessToken currentAccessToken]);
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlayListView : UIViewController
+@interface PlayListView : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *playListTbl;
+//songscell cell idintifier
+
+
 
 @end

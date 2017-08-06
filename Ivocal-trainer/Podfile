@@ -7,10 +7,18 @@ target 'Ivocal-trainer' do
 
   # Pods for Ivocal-trainer
   use_frameworks!
+  inherit! :search_paths
    pod 'Bolts'
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
+  pod 'EZAudio', '~> 1.1.4'
+  pod 'AFNetworking', '~> 2.5'
+  pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+
+  
+
+
 
   target 'Ivocal-trainerTests' do
     inherit! :search_paths
