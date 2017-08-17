@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "EZAudio.h"
+#import "UIColor+HexString.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "RecordView.h"
+
 
 
 
@@ -21,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *timeSlider;
 @property (weak, nonatomic) IBOutlet UITextView *lyricView;
 @property (weak, nonatomic) IBOutlet EZAudioPlotGL *audiographView;
+@property (weak, nonatomic) IBOutlet UIImageView *backImgeView;
 
 
 #pragma mark - Properties
@@ -40,6 +45,8 @@
 
 
 @property (nonatomic, strong) EZAudioFFTRolling *fft;
+
+@property(atomic , strong)NSMutableDictionary *songDict;
 
 
 

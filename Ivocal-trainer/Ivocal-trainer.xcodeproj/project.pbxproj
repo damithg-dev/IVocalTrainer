@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		12CC4EDDC1D876AE0185D35B /* Pods_Ivocal_trainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B5E52EB67730A3CA5BEEB7 /* Pods_Ivocal_trainer.framework */; };
 		640854131F32236700703BF9 /* RecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 640854121F32236700703BF9 /* RecordView.m */; };
+		644DE55A1F41F67E00AB3C3E /* FriendListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DE5591F41F67E00AB3C3E /* FriendListView.m */; };
 		645AABAE1F1BA4E000FEA7CD /* SongView.m in Sources */ = {isa = PBXBuildFile; fileRef = 645AABAD1F1BA4E000FEA7CD /* SongView.m */; };
 		645AABB01F1BA5B200FEA7CD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645AABAF1F1BA5B200FEA7CD /* AVFoundation.framework */; };
+		64760D141F3A0E84004629C2 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 64760D131F3A0E84004629C2 /* UIColor+HexString.m */; };
 		64915EDF1F2C6A35007E0B1A /* 05 Happy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64915EDE1F2C6A35007E0B1A /* 05 Happy.mp3 */; };
 		64B19B781F19DD490025EA44 /* SongsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B19B771F19DD490025EA44 /* SongsCell.m */; };
 		64DEE2AD1F17B846008EB9BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2AC1F17B846008EB9BE /* main.m */; };
@@ -31,6 +33,8 @@
 		64DF37BF1F2F7A3A006B0A6F /* EZAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DF37AF1F2D89E5006B0A6F /* EZAudio.framework */; };
 		64DF37C01F2F7A47006B0A6F /* EZAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DF37AF1F2D89E5006B0A6F /* EZAudio.framework */; };
 		64DF37C11F2F7A47006B0A6F /* EZAudio.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 64DF37AF1F2D89E5006B0A6F /* EZAudio.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		64E915AA1F38B99C00AFB048 /* utill.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E915A91F38B99C00AFB048 /* utill.m */; };
+		64E915AD1F38D67B00AFB048 /* Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E915AC1F38D67B00AFB048 /* Alerts.m */; };
 		6D56D70A85471C099A4BA3BD /* Pods_Ivocal_trainerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273ECE4880700B1323E994AE /* Pods_Ivocal_trainerTests.framework */; };
 		F355AE955C8C1B7BB4FF4146 /* Pods_Ivocal_trainerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6197D2E026A0A9F78156E8A /* Pods_Ivocal_trainerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -71,9 +75,13 @@
 		273ECE4880700B1323E994AE /* Pods_Ivocal_trainerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ivocal_trainerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		640854111F32236700703BF9 /* RecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordView.h; sourceTree = "<group>"; };
 		640854121F32236700703BF9 /* RecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordView.m; sourceTree = "<group>"; };
+		644DE5581F41F67E00AB3C3E /* FriendListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListView.h; sourceTree = "<group>"; };
+		644DE5591F41F67E00AB3C3E /* FriendListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListView.m; sourceTree = "<group>"; };
 		645AABAC1F1BA4E000FEA7CD /* SongView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongView.h; sourceTree = "<group>"; };
 		645AABAD1F1BA4E000FEA7CD /* SongView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongView.m; sourceTree = "<group>"; };
 		645AABAF1F1BA5B200FEA7CD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		64760D121F3A0E84004629C2 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		64760D131F3A0E84004629C2 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 		64915EDE1F2C6A35007E0B1A /* 05 Happy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "05 Happy.mp3"; sourceTree = "<group>"; };
 		64B19B761F19DD490025EA44 /* SongsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsCell.h; sourceTree = "<group>"; };
 		64B19B771F19DD490025EA44 /* SongsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsCell.m; sourceTree = "<group>"; };
@@ -105,6 +113,10 @@
 		64DF37B61F2E09D4006B0A6F /* Class */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Class; path = "../../../Downloads/WaveView-master/Class"; sourceTree = "<group>"; };
 		64DF37B81F2E0AAE006B0A6F /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
 		64DF37B91F2E0AAE006B0A6F /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
+		64E915A81F38B95500AFB048 /* utill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utill.h; sourceTree = "<group>"; };
+		64E915A91F38B99C00AFB048 /* utill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = utill.m; sourceTree = "<group>"; };
+		64E915AB1F38D67B00AFB048 /* Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alerts.h; sourceTree = "<group>"; };
+		64E915AC1F38D67B00AFB048 /* Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alerts.m; sourceTree = "<group>"; };
 		76C5C5176D2F32B0679B5419 /* Pods-Ivocal-trainerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainerTests/Pods-Ivocal-trainerTests.release.xcconfig"; sourceTree = "<group>"; };
 		79F9C9E85A93892EE845FAD9 /* Pods-Ivocal-trainerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainerUITests/Pods-Ivocal-trainerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6DB8BF6ACD9DF06B0035683 /* Pods-Ivocal-trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainer/Pods-Ivocal-trainer.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,9 +231,15 @@
 		64DEE2AB1F17B846008EB9BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				64760D121F3A0E84004629C2 /* UIColor+HexString.h */,
+				64760D131F3A0E84004629C2 /* UIColor+HexString.m */,
 				64DF37B81F2E0AAE006B0A6F /* WaveView.h */,
+				64E915AB1F38D67B00AFB048 /* Alerts.h */,
+				64E915AC1F38D67B00AFB048 /* Alerts.m */,
 				64DF37B91F2E0AAE006B0A6F /* WaveView.m */,
 				64DEE2AC1F17B846008EB9BE /* main.m */,
+				64E915A81F38B95500AFB048 /* utill.h */,
+				64E915A91F38B99C00AFB048 /* utill.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -274,6 +292,8 @@
 			children = (
 				64DEE2E41F17BA4B008EB9BE /* FBLoginView.h */,
 				64DEE2E51F17BA4B008EB9BE /* FBLoginView.m */,
+				644DE5581F41F67E00AB3C3E /* FriendListView.h */,
+				644DE5591F41F67E00AB3C3E /* FriendListView.m */,
 			);
 			name = "Social media";
 			sourceTree = "<group>";
@@ -574,14 +594,18 @@
 			files = (
 				64DEE2E91F17BA6C008EB9BE /* ProfileView.m in Sources */,
 				64DEE2EF1F17BB03008EB9BE /* DashboardView.m in Sources */,
+				644DE55A1F41F67E00AB3C3E /* FriendListView.m in Sources */,
 				64DEE2EC1F17BA8D008EB9BE /* PlayListView.m in Sources */,
 				640854131F32236700703BF9 /* RecordView.m in Sources */,
 				64DEE2E61F17BA4B008EB9BE /* FBLoginView.m in Sources */,
 				64DEE2B01F17B846008EB9BE /* AppDelegate.m in Sources */,
+				64E915AD1F38D67B00AFB048 /* Alerts.m in Sources */,
 				64DEE2AD1F17B846008EB9BE /* main.m in Sources */,
 				64B19B781F19DD490025EA44 /* SongsCell.m in Sources */,
+				64E915AA1F38B99C00AFB048 /* utill.m in Sources */,
 				645AABAE1F1BA4E000FEA7CD /* SongView.m in Sources */,
 				64DF37BA1F2E0AAE006B0A6F /* WaveView.m in Sources */,
+				64760D141F3A0E84004629C2 /* UIColor+HexString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFNetworking.h"
+#import "SVProgressHUD.h"
+#import "utill.h"
+#import "Alerts.h"
+#import "SongsCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIColor+HexString.h"
+#import "SongView.h"
+
 
 @interface PlayListView : UIViewController<UITableViewDelegate,UITableViewDataSource>
 

@@ -16,6 +16,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //--------------FOR TAB BAR COLOR---------------//
+    [[UITabBar appearance] setBarTintColor:[UIColor colorWithHexString:@"1D1D1D"]];
+    //--------------FOR TAB BAR BUTTON COLOR---------------//
+    [[UITabBar appearance] setTintColor:[UIColor colorWithHexString:@"FE4E71"]];
+
     // Override point for customization after application launch.
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];

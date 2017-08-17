@@ -14,6 +14,9 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
 @interface SongView (){
     NSTimer *timer;
     float val;
+    NSMutableArray *noteArray;
+    NSMutableArray *frqArray;
+
 }
 
 @end
@@ -22,10 +25,26 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
 
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self.audiographView clear];
+    self.audiographView.backgroundColor = [UIColor colorWithRed: 0.0 green: 0.0 blue: 0.0 alpha: 0.0];
+    self.timeSlider.value = 0.0;
+    
     [self initAudioPlayer];
     [self initNavigationBar];
+    [self initSongandPlayerBackground];
+    noteArray = [[NSMutableArray alloc]init];
+    frqArray = [[NSMutableArray alloc]init];
+}
+
+-(void)initSongandPlayerBackground{
+    [self.backImgeView sd_setImageWithURL:[NSURL URLWithString:[self.songDict valueForKey:@"img"]]
+                                placeholderImage:[UIImage imageNamed:@"song_placeholder.png"]
+                                       completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
+    
 }
 
 -(void)initNavigationBar{
@@ -34,7 +53,9 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
     self.navigationController.navigationBar.shadowImage = [UIImage new];////UIImageNamed:@"transparent.png"
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
-    self.title = @"asdasdas";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#FE4E71"]}];
+
+    self.title =[self.songDict valueForKey:@"name"];
     self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
@@ -53,18 +74,10 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
     //slider
     self.timeSlider.maximumValue = (float)self.audioFile.totalFrames;
     self.timeSlider.value = 0.0;
-    
-    [self.player playAudioFile:self.audioFile];
-    [self.playBtn setSelected:true];
-    [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
-    
-    //fft initialize
-    self.fft = [EZAudioFFTRolling fftWithWindowSize:FFTViewControllerFFTWindowSize
-                                         sampleRate:self.audioFile.clientFormat.mSampleRate
-                                           delegate:self];
-    
+
     self.audiographView.plotType = EZPlotTypeRolling;
-    //x axis drawing speed 
+    
+    //x axis drawing speed
     self.audiographView.rollingHistoryLength = 800.0;
 
 
@@ -76,6 +89,16 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
                            withBufferSize:length];
      }];
     
+
+    
+    [self.player playAudioFile:self.audioFile];
+    [self.playBtn setSelected:true];
+    [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
+    
+    //fft initialize
+    self.fft = [EZAudioFFTRolling fftWithWindowSize:FFTViewControllerFFTWindowSize
+                                         sampleRate:self.audioFile.clientFormat.mSampleRate
+                                           delegate:self];
     
     
 }
@@ -147,10 +170,13 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
 
 -(void)viewWillDisappear:(BOOL)animated{
     [self.player pause];
+    [self.audiographView clear];
+    self.timeSlider.value = 0.0;
     [self.playBtn setImage:[UIImage imageNamed:@"play_"] forState:UIControlStateNormal];
     [self.playBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateHighlighted];
     [self.playBtn setSelected:NO];
 }
+
 
 #pragma mark - EZAudioFFTDelegate
 //------------------------------------------------------------------------------
@@ -167,6 +193,8 @@ updatedWithFFTData:(float *)fftData
     
     //    __weak typeof (self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
+        [frqArray addObject:[NSString stringWithFormat:@"%f",maxFrequency]];
+        [noteArray addObject:noteName];
         NSLog(@"%@",[NSString stringWithFormat:@"Highest Note: %@,\nFrequency: %.2f", noteName, maxFrequency]);
         // weakSelf.maxFrequencyLabel.text = [NSString stringWithFormat:@"Highest Note: %@,\nFrequency: %.2f", noteName, maxFrequency];
         // [weakSelf.audioPlotFreq updateBuffer:fftData withBufferSize:(UInt32)bufferSize];
@@ -207,14 +235,20 @@ updatedWithFFTData:(float *)fftData
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"torecord"]) {
+        
+        RecordView *vc = [segue destinationViewController];
+        vc.songDict = [self.songDict mutableCopy];
+        vc.audioFile = [self.audioFile copy];
+        vc.frqArray = [frqArray mutableCopy];
+        vc.noteArray = [noteArray mutableCopy];
+    }
 }
-*/
+
 
 @end

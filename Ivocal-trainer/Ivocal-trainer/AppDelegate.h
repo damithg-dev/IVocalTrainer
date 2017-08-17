@@ -7,6 +7,7 @@
 //
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <UIKit/UIKit.h>
+#import "UIColor+HexString.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

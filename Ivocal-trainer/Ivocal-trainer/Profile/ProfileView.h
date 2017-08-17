@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBSDKCoreKit.h"
+#import "FBSDKLoginKit.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "SVProgressHUD.h"
+#import "UIColor+HexString.h"
+
 
 @interface ProfileView : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *userNameLbl;
+@property (weak, nonatomic) IBOutlet UIImageView *prfImgeView;
+@property (weak, nonatomic) IBOutlet UIImageView *backImgeView;
 
 @end

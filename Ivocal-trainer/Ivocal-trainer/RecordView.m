@@ -7,6 +7,8 @@
 //
 
 #import "RecordView.h"
+static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
+
 
 @interface RecordView ()
 
@@ -15,21 +17,28 @@
 
 @implementation RecordView
 
+//------------------------------------------------------------------------------
+#pragma mark - Dealloc
+//------------------------------------------------------------------------------
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNotifications];
     [self initMicrphone];
-
-    // Do any additional setup after loading the view.
 }
 
 -(void)initMicrphone{
+    
     AVAudioSession *session = [AVAudioSession sharedInstance];
     NSError *error;
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
     if (error)
     {
-        NSLog(@"Error setting up audio session category: %@", error.localizedDescription);
+        NSLog(@"Error  setting up audio session category: %@", error.localizedDescription);
     }
     [session setActive:YES error:&error];
     if (error)
@@ -43,11 +52,22 @@
     self.microphone = [EZMicrophone microphoneWithDelegate:self];
     self.player = [EZAudioPlayer audioPlayerWithDelegate:self];
     
+
     [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&error];
     if (error)
     {
         NSLog(@"Error overriding output to the speaker: %@", error.localizedDescription);
     }
+    
+    
+    
+    [self setupNotifications];
+ 
+    NSLog(@"File written to application sandbox's documents directory: %@",[self testFilePathURL]);
+    
+    self.fft = [EZAudioFFTRolling fftWithWindowSize:FFTViewControllerFFTWindowSize
+                                         sampleRate:self.microphone.audioStreamBasicDescription.mSampleRate
+                                           delegate:self];
 
 }
 
@@ -62,7 +82,38 @@
                                                  name:EZAudioPlayerDidReachEndOfFileNotification
                                                object:self.player];
 }
+- (IBAction)recordStartPauseButtonPressed:(id)sender {
+    if (self.recrdStartPauseBtn.isSelected) {
+        [self.microphone stopFetchingAudio];
+        self.recorder = [EZRecorder recorderWithURL:[self testFilePathURL]
+                                       clientFormat:[self.microphone audioStreamBasicDescription]
+                                           fileType:EZRecorderFileTypeM4A
+                                           delegate:self];
+        self.recrdStartPauseBtn.selected = false;
+        //self.playButton.enabled = YES;
+    }else{
+        [self.microphone startFetchingAudio];
+        self.recorder = [EZRecorder recorderWithURL:[self testFilePathURL]
+                                       clientFormat:[self.microphone audioStreamBasicDescription]
+                                           fileType:EZRecorderFileTypeM4A
+                                           delegate:self];
+        self.recrdStartPauseBtn.selected = true;
+    }
+    
+    
+    //fft initialize
+ 
 
+}
+
+- (IBAction)recordStopButtonPressed:(id)sender {
+    [self.microphone stopFetchingAudio];
+    [self.recorder closeAudioFile];
+    self.recrdStartPauseBtn.selected = false;
+}
+- (IBAction)canselButtonPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:true];
+}
 #pragma mark - Notifications
 //------------------------------------------------------------------------------
 
@@ -109,22 +160,12 @@
 // blocked. When we feed audio data into any of the UI components we need to
 // explicity create a GCD block on the main thread to properly get the UI to
 // work.
-- (void)   microphone:(EZMicrophone *)microphone
+- (void)microphone:(EZMicrophone *)microphone
      hasAudioReceived:(float **)buffer
        withBufferSize:(UInt32)bufferSize
  withNumberOfChannels:(UInt32)numberOfChannels
 {
-    // Getting audio data as an array of float buffer arrays. What does that
-    // mean? Because the audio is coming in as a stereo signal the data is split
-    // into a left and right channel. So buffer[0] corresponds to the float* data
-    // for the left channel while buffer[1] corresponds to the float* data for
-    // the right channel.
-    
-    //
-    // See the Thread Safety warning above, but in a nutshell these callbacks
-    // happen on a separate audio thread. We wrap any UI updating in a GCD block
-    // on the main thread to avoid blocking that audio flow.
-    //
+    [self.fft computeFFTWithBuffer:buffer[0] withBufferSize:bufferSize];
     __weak typeof (self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
         //
@@ -177,6 +218,34 @@
       //  weakSelf.currentTimeLabel.text = formattedCurrentTime;
     });
 }
+#pragma mark - EZAudioFFTDelegate
+//------------------------------------------------------------------------------
+
+- (void)fft:(EZAudioFFT *)fft
+updatedWithFFTData:(float *)fftData
+ bufferSize:(vDSP_Length)bufferSize
+{
+    
+    
+    float maxFrequency = [fft maxFrequency];
+    NSString *noteName = [EZAudioUtilities noteNameStringForFrequency:maxFrequency
+                                                        includeOctave:YES];
+//    if ([[self.frqArray objectAtIndex:i]isEqualToString:[NSString stringWithFormat:@"%f",maxFrequency]]) {
+//        NSLog(@"ela ela%@",[NSString stringWithFormat:@"amthure Note: %@,\nFrequency: %.2f", noteName, maxFrequency]);
+//        NSLog(@"ela ela%@",[NSString stringWithFormat:@"original Note: %@,\nFrequency: %@", [self.noteArray objectAtIndex:i], [self.frqArray objectAtIndex:i]]);
+//    }else{
+//    NSLog(@"%@",[NSString stringWithFormat:@"amthure Note: %@,\nFrequency: %.2f", noteName, maxFrequency]);
+//    NSLog(@"%@",[NSString stringWithFormat:@"original Note: %@,\nFrequency: %@", [self.noteArray objectAtIndex:i], [self.frqArray objectAtIndex:i]]);
+//    }
+ 
+    //    __weak typeof (self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"%@",[NSString stringWithFormat:@"Highest Note: %@,\nFrequency: %.2f", noteName, maxFrequency]);
+        
+        // weakSelf.maxFrequencyLabel.text = [NSString stringWithFormat:@"Highest Note: %@,\nFrequency: %.2f", noteName, maxFrequency];
+        // [weakSelf.audioPlotFreq updateBuffer:fftData withBufferSize:(UInt32)bufferSize];
+    });
+}
 
 
 //------------------------------------------------------------------------------
@@ -189,6 +258,7 @@
 withNumberOfChannels:(UInt32)numberOfChannels
          inAudioFile:(EZAudioFile *)audioFile
 {
+    
     __weak typeof (self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
        // [weakSelf.playingAudioPlot updateBuffer:buffer[0] withBufferSize:bufferSize];
@@ -232,14 +302,6 @@ withNumberOfChannels:(UInt32)numberOfChannels
     return [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@",
                                    [self applicationDocumentsDirectory],
                                    kAudioFilePath]];
-}
-
-#pragma mark - Dealloc
-//------------------------------------------------------------------------------
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 

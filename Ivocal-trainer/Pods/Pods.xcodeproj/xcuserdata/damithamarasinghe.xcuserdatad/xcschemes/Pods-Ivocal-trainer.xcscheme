@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E595A494B3CF0AFCBD0939CE64669C0"
+               BlueprintIdentifier = "4032BC2CFF361BE754DE0FC73973D9E6"
                BuildableName = "Pods_Ivocal_trainer.framework"
                BlueprintName = "Pods-Ivocal-trainer"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E595A494B3CF0AFCBD0939CE64669C0"
+            BlueprintIdentifier = "4032BC2CFF361BE754DE0FC73973D9E6"
             BuildableName = "Pods_Ivocal_trainer.framework"
             BlueprintName = "Pods-Ivocal-trainer"
             ReferencedContainer = "container:Pods.xcodeproj">

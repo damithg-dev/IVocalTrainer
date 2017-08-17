@@ -17,21 +17,52 @@
 
 @implementation FBLoginView
 
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    
-    loginButton = [[FBSDKLoginButton alloc] init];
-    loginButton.readPermissions =@[@"public_profile", @"email", @"user_friends"];
-    loginButton.hidden = true;
-}
-- (IBAction)loginButtonPressed:(id)sender {
-     [loginButton sendActionsForControlEvents: UIControlEventTouchUpInside];
-    
-    if ([FBSDKAccessToken currentAccessToken]) {
+    if ([FBSDKAccessToken currentAccessToken] != NULL) {
+        [self performSegueWithIdentifier:@"tofrilist" sender:nil];
         NSLog(@"token %@",[FBSDKAccessToken currentAccessToken]);
     }
+    
+    loginButton = [[FBSDKLoginButton alloc] init];
+    loginButton.readPermissions =@[@"public_profile", @"email", @"user_friends",@"user_photos",@"publish_actions"];
+    loginButton.hidden = true;
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:NO];
+    if ([FBSDKAccessToken currentAccessToken] != NULL) {
+        [self performSegueWithIdentifier:@"tofrilist" sender:nil];
+        NSLog(@"token %@",[FBSDKAccessToken currentAccessToken]);
+    }
+}
+- (IBAction)loginButtonPressed:(id)sender {
+    [self loginButtonClicked];
+//     [loginButton sendActionsForControlEvents: UIControlEventTouchUpInside];
+//    
+//    if ([FBSDKAccessToken currentAccessToken]) {
+//        NSLog(@"token %@",[FBSDKAccessToken currentAccessToken]);
+//    }
+}
+
+-(void)loginButtonClicked
+{
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login
+     logInWithReadPermissions: @[@"public_profile"]
+     fromViewController:self
+     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+         if (error) {
+             NSLog(@"Process error");
+         } else if (result.isCancelled) {
+             NSLog(@"Cancelled");
+         } else {
+             NSLog(@"Logged in");
+             NSLog(@"token %@",[FBSDKAccessToken currentAccessToken]);
+
+         }
+     }];
 }
 
 - (void)didReceiveMemoryWarning {
