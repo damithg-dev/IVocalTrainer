@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		12CC4EDDC1D876AE0185D35B /* Pods_Ivocal_trainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B5E52EB67730A3CA5BEEB7 /* Pods_Ivocal_trainer.framework */; };
 		640854131F32236700703BF9 /* RecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 640854121F32236700703BF9 /* RecordView.m */; };
+		6428E4C71F49E2A900DDF4F3 /* PitchMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6428E4C61F49E2A900DDF4F3 /* PitchMeterView.m */; };
 		644DE55A1F41F67E00AB3C3E /* FriendListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DE5591F41F67E00AB3C3E /* FriendListView.m */; };
 		645AABAE1F1BA4E000FEA7CD /* SongView.m in Sources */ = {isa = PBXBuildFile; fileRef = 645AABAD1F1BA4E000FEA7CD /* SongView.m */; };
 		645AABB01F1BA5B200FEA7CD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645AABAF1F1BA5B200FEA7CD /* AVFoundation.framework */; };
@@ -75,6 +76,8 @@
 		273ECE4880700B1323E994AE /* Pods_Ivocal_trainerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ivocal_trainerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		640854111F32236700703BF9 /* RecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordView.h; sourceTree = "<group>"; };
 		640854121F32236700703BF9 /* RecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordView.m; sourceTree = "<group>"; };
+		6428E4C51F49E2A900DDF4F3 /* PitchMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PitchMeterView.h; sourceTree = "<group>"; };
+		6428E4C61F49E2A900DDF4F3 /* PitchMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PitchMeterView.m; sourceTree = "<group>"; };
 		644DE5581F41F67E00AB3C3E /* FriendListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListView.h; sourceTree = "<group>"; };
 		644DE5591F41F67E00AB3C3E /* FriendListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListView.m; sourceTree = "<group>"; };
 		645AABAC1F1BA4E000FEA7CD /* SongView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongView.h; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 			children = (
 				64DEE2ED1F17BB03008EB9BE /* DashboardView.h */,
 				64DEE2EE1F17BB03008EB9BE /* DashboardView.m */,
+				6428E4C51F49E2A900DDF4F3 /* PitchMeterView.h */,
+				6428E4C61F49E2A900DDF4F3 /* PitchMeterView.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -606,6 +611,7 @@
 				645AABAE1F1BA4E000FEA7CD /* SongView.m in Sources */,
 				64DF37BA1F2E0AAE006B0A6F /* WaveView.m in Sources */,
 				64760D141F3A0E84004629C2 /* UIColor+HexString.m in Sources */,
+				6428E4C71F49E2A900DDF4F3 /* PitchMeterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

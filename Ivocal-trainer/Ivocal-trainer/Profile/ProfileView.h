@@ -20,4 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *prfImgeView;
 @property (weak, nonatomic) IBOutlet UIImageView *backImgeView;
 
+
+-(void)getFacebookProfileDetails;
 @end

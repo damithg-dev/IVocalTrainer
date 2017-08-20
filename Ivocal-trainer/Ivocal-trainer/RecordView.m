@@ -29,7 +29,22 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initMicrphone];
+    [self initNavigationBar];
 }
+
+-(void)initNavigationBar{
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    //UIImageNamed:@"transparent.png"
+    self.navigationController.navigationBar.shadowImage = [UIImage new];////UIImageNamed:@"transparent.png"
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#FE4E71"]}];
+    
+    self.title =[self.songDict valueForKey:@"name"];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+}
+
+
 
 -(void)initMicrphone{
     
@@ -114,6 +129,8 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
 - (IBAction)canselButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:true];
 }
+
+
 #pragma mark - Notifications
 //------------------------------------------------------------------------------
 
@@ -261,7 +278,6 @@ withNumberOfChannels:(UInt32)numberOfChannels
     
     __weak typeof (self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-       // [weakSelf.playingAudioPlot updateBuffer:buffer[0] withBufferSize:bufferSize];
     });
 }
 

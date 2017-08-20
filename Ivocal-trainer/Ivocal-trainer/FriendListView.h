@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FriendListView : UIViewController
+@interface FriendListView : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *friendsTblView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *categoryTab;
 
 @end

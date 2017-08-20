@@ -25,7 +25,6 @@
         [self performSegueWithIdentifier:@"tofrilist" sender:nil];
         NSLog(@"token %@",[FBSDKAccessToken currentAccessToken]);
     }
-    
     loginButton = [[FBSDKLoginButton alloc] init];
     loginButton.readPermissions =@[@"public_profile", @"email", @"user_friends",@"user_photos",@"publish_actions"];
     loginButton.hidden = true;
@@ -58,9 +57,11 @@
          } else if (result.isCancelled) {
              NSLog(@"Cancelled");
          } else {
-             NSLog(@"Logged in");
+//             NSLog(@"Logged in");
+             [self performSegueWithIdentifier:@"tofrilist" sender:nil];
              NSLog(@"token %@",[FBSDKAccessToken currentAccessToken]);
-
+             ProfileView *vc = [[ProfileView alloc]init];
+             [vc getFacebookProfileDetails];
          }
      }];
 }

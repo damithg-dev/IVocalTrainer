@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "EZAudio.h"
+#import "UIColor+HexString.h"
 
 
 @interface RecordView : UIViewController <EZAudioPlayerDelegate, EZMicrophoneDelegate, EZRecorderDelegate,EZAudioFFTDelegate>

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FBSDKCoreKit.h"
 #import "FBSDKLoginKit.h"
+#import "ProfileView.h"
 
 @interface FBLoginView : UIViewController
 

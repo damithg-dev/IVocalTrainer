@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.friendsTblView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     // Do any additional setup after loading the view.
 }
 
@@ -24,6 +25,41 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    int i = 0;
+    int index = (int)[self.categoryTab selectedSegmentIndex];
+    switch (index) {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        default:
+            break;
+    }
+    
+    return 1;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    int index = (int)[self.categoryTab selectedSegmentIndex];
+    switch (index) {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        default:
+            break;
+    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"friendscell"];
+    return cell;
+}
 /*
 #pragma mark - Navigation
 

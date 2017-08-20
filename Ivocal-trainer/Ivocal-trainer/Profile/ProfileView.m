@@ -20,22 +20,38 @@
     [self getFacebookProfileDetails];
 }
 
+
 -(void)getFacebookProfileDetails{
     
-    [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"email,name,first_name,cover,picture.type(large)"}]
-     startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
-         if (!error) {
-//             NSLog(@"fetched user:%@", result);
-             [self.navigationItem setTitle:result[@"name"]];
-             [self.backImgeView sd_setImageWithURL:[NSURL URLWithString:[[result valueForKey:@"cover"] valueForKey:@"source"]]
-                                  placeholderImage:[UIImage imageNamed:@"user_cover"]
-                                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
-             [self.prfImgeView sd_setImageWithURL:[NSURL URLWithString:[[[result valueForKey:@"picture"] valueForKey:@"data"]valueForKey:@"url" ]]
-                                 placeholderImage:[UIImage imageNamed:@"user_pic"]
-                                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
-         }
-     }];
+    if ([FBSDKAccessToken currentAccessToken] != NULL) {
+        self.view.alpha = 0;
+        [SVProgressHUD show];
+        [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"email,name,first_name,cover,picture.type(large)"}]
+         startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+             if (!error) {
+                 //             NSLog(@"fetched user:%@", result);
+                 [self.navigationItem setTitle:result[@"name"]];
+                 [self.navigationItem.rightBarButtonItem setEnabled:YES];
+                 [self.backImgeView sd_setImageWithURL:[NSURL URLWithString:[[result valueForKey:@"cover"] valueForKey:@"source"]]
+                                      placeholderImage:[UIImage imageNamed:@"user_cover"]
+                                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
+                 [self.prfImgeView sd_setImageWithURL:[NSURL URLWithString:[[[result valueForKey:@"picture"] valueForKey:@"data"]valueForKey:@"url" ]]
+                                     placeholderImage:[UIImage imageNamed:@"user_pic"]
+                                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
+                 [SVProgressHUD dismiss];
+                 self.view.alpha = 1;
+
+             }
+         }];
+        
+    }else{
+        [self.navigationItem.rightBarButtonItem setEnabled:NO];
+        [self.navigationItem setTitle:@"User"];
+        [self.backImgeView setImage:[UIImage imageNamed:@"user_cover"]];
+        [self.prfImgeView setImage:[UIImage imageNamed:@"user_pic"]];
+    }
 }
+
 
 -(void)initNavigationBar{
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
@@ -57,20 +73,17 @@
     }]];
     if ([FBSDKAccessToken currentAccessToken] != NULL) {
         [actionSheet addAction:[UIAlertAction actionWithTitle:@"Log out" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            [self dismissViewControllerAnimated:YES completion:^{
-                FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
-                [loginManager logOut];
-                [FBSDKAccessToken setCurrentAccessToken:nil];
-
-            }];
+            FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
+            [loginManager logOut];
+            [FBSDKAccessToken setCurrentAccessToken:nil];
+            [self getFacebookProfileDetails];
+            [self dismissViewControllerAnimated:YES completion:^{}];
         }]];
     }
-  
-    
     
     // Present action sheet.
     [self presentViewController:actionSheet animated:YES completion:nil];
-
+    
 }
 
 
@@ -80,13 +93,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
