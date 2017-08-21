@@ -36,6 +36,10 @@
 		64DF37C11F2F7A47006B0A6F /* EZAudio.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 64DF37AF1F2D89E5006B0A6F /* EZAudio.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		64E915AA1F38B99C00AFB048 /* utill.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E915A91F38B99C00AFB048 /* utill.m */; };
 		64E915AD1F38D67B00AFB048 /* Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E915AC1F38D67B00AFB048 /* Alerts.m */; };
+		64F712D31F4B383800743205 /* TraningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F712D21F4B383800743205 /* TraningView.m */; };
+		64F712D61F4B385100743205 /* WarmsUpsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F712D51F4B385100743205 /* WarmsUpsView.m */; };
+		64F712D91F4B387200743205 /* LessonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F712D81F4B387200743205 /* LessonsView.m */; };
+		64F712DC1F4B38B200743205 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64F712DB1F4B38B200743205 /* HomeCell.m */; };
 		6D56D70A85471C099A4BA3BD /* Pods_Ivocal_trainerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273ECE4880700B1323E994AE /* Pods_Ivocal_trainerTests.framework */; };
 		F355AE955C8C1B7BB4FF4146 /* Pods_Ivocal_trainerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6197D2E026A0A9F78156E8A /* Pods_Ivocal_trainerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -120,6 +124,14 @@
 		64E915A91F38B99C00AFB048 /* utill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = utill.m; sourceTree = "<group>"; };
 		64E915AB1F38D67B00AFB048 /* Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alerts.h; sourceTree = "<group>"; };
 		64E915AC1F38D67B00AFB048 /* Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alerts.m; sourceTree = "<group>"; };
+		64F712D11F4B383800743205 /* TraningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraningView.h; sourceTree = "<group>"; };
+		64F712D21F4B383800743205 /* TraningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraningView.m; sourceTree = "<group>"; };
+		64F712D41F4B385100743205 /* WarmsUpsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarmsUpsView.h; sourceTree = "<group>"; };
+		64F712D51F4B385100743205 /* WarmsUpsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarmsUpsView.m; sourceTree = "<group>"; };
+		64F712D71F4B387200743205 /* LessonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonsView.h; sourceTree = "<group>"; };
+		64F712D81F4B387200743205 /* LessonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonsView.m; sourceTree = "<group>"; };
+		64F712DA1F4B38B200743205 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		64F712DB1F4B38B200743205 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 		76C5C5176D2F32B0679B5419 /* Pods-Ivocal-trainerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainerTests/Pods-Ivocal-trainerTests.release.xcconfig"; sourceTree = "<group>"; };
 		79F9C9E85A93892EE845FAD9 /* Pods-Ivocal-trainerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainerUITests/Pods-Ivocal-trainerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6DB8BF6ACD9DF06B0035683 /* Pods-Ivocal-trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivocal-trainer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ivocal-trainer/Pods-Ivocal-trainer.release.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +284,14 @@
 				64DEE2EE1F17BB03008EB9BE /* DashboardView.m */,
 				6428E4C51F49E2A900DDF4F3 /* PitchMeterView.h */,
 				6428E4C61F49E2A900DDF4F3 /* PitchMeterView.m */,
+				64F712D11F4B383800743205 /* TraningView.h */,
+				64F712D21F4B383800743205 /* TraningView.m */,
+				64F712D41F4B385100743205 /* WarmsUpsView.h */,
+				64F712D51F4B385100743205 /* WarmsUpsView.m */,
+				64F712D71F4B387200743205 /* LessonsView.h */,
+				64F712D81F4B387200743205 /* LessonsView.m */,
+				64F712DA1F4B38B200743205 /* HomeCell.h */,
+				64F712DB1F4B38B200743205 /* HomeCell.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -603,8 +623,12 @@
 				64DEE2EC1F17BA8D008EB9BE /* PlayListView.m in Sources */,
 				640854131F32236700703BF9 /* RecordView.m in Sources */,
 				64DEE2E61F17BA4B008EB9BE /* FBLoginView.m in Sources */,
+				64F712D91F4B387200743205 /* LessonsView.m in Sources */,
+				64F712D61F4B385100743205 /* WarmsUpsView.m in Sources */,
+				64F712D31F4B383800743205 /* TraningView.m in Sources */,
 				64DEE2B01F17B846008EB9BE /* AppDelegate.m in Sources */,
 				64E915AD1F38D67B00AFB048 /* Alerts.m in Sources */,
+				64F712DC1F4B38B200743205 /* HomeCell.m in Sources */,
 				64DEE2AD1F17B846008EB9BE /* main.m in Sources */,
 				64B19B781F19DD490025EA44 /* SongsCell.m in Sources */,
 				64E915AA1F38B99C00AFB048 /* utill.m in Sources */,
