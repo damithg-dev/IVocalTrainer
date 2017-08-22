@@ -16,7 +16,7 @@
 #import "SVProgressHUD.h"
 #import "utill.h"
 #import "Alerts.h"
-
+#import "LessonsProfileView.h"
 
 @interface LessonsView : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *lessonsTbl;

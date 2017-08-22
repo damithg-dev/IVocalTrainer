@@ -10,6 +10,7 @@
 
 @interface TraningView (){
     NSMutableArray *traningArray;
+    NSMutableDictionary *traningDict;
 }
 
 @end
@@ -19,7 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initNavigationBar];
+    
     traningArray = [[NSMutableArray alloc]init];
+    traningDict = [[NSMutableDictionary alloc]init];
 }
 
 -(void)initNavigationBar{
@@ -49,7 +52,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"lessons"];
+    HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"traningCell"];
 //    cell.titleLbl.text = ;
 //    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:[]
 //                         placeholderImage:[UIImage imageNamed:@"user_cover"]
@@ -92,6 +95,13 @@
 }
 
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    traningDict = [[NSMutableDictionary alloc]initWithDictionary:[traningArray objectAtIndex:indexPath.row]];
+    [self performSegueWithIdentifier:@"toprofile" sender:nil];
+}
+
+
 
 
 
@@ -100,14 +110,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"toprofile"]) {
+        TraningProfileView *vc = [segue destinationViewController];
+        vc.traningDict = [traningDict mutableCopy];
+    }
 }
-*/
 
 @end

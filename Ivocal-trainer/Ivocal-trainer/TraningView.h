@@ -15,6 +15,7 @@
 #import "SVProgressHUD.h"
 #import "utill.h"
 #import "Alerts.h"
+#import "TraningProfileView.h"
 
 
 

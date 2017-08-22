@@ -13,6 +13,9 @@
 		644DE55A1F41F67E00AB3C3E /* FriendListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 644DE5591F41F67E00AB3C3E /* FriendListView.m */; };
 		645AABAE1F1BA4E000FEA7CD /* SongView.m in Sources */ = {isa = PBXBuildFile; fileRef = 645AABAD1F1BA4E000FEA7CD /* SongView.m */; };
 		645AABB01F1BA5B200FEA7CD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645AABAF1F1BA5B200FEA7CD /* AVFoundation.framework */; };
+		646EA6161F4C7EDF002B0A22 /* TraningProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 646EA6151F4C7EDF002B0A22 /* TraningProfileView.m */; };
+		646EA6191F4C7F0D002B0A22 /* WarmsUpsProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 646EA6181F4C7F0D002B0A22 /* WarmsUpsProfileView.m */; };
+		646EA61C1F4C86FA002B0A22 /* LessonsProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 646EA61B1F4C86FA002B0A22 /* LessonsProfileView.m */; };
 		64760D141F3A0E84004629C2 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 64760D131F3A0E84004629C2 /* UIColor+HexString.m */; };
 		64915EDF1F2C6A35007E0B1A /* 05 Happy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64915EDE1F2C6A35007E0B1A /* 05 Happy.mp3 */; };
 		64B19B781F19DD490025EA44 /* SongsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B19B771F19DD490025EA44 /* SongsCell.m */; };
@@ -87,6 +90,12 @@
 		645AABAC1F1BA4E000FEA7CD /* SongView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongView.h; sourceTree = "<group>"; };
 		645AABAD1F1BA4E000FEA7CD /* SongView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongView.m; sourceTree = "<group>"; };
 		645AABAF1F1BA5B200FEA7CD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		646EA6141F4C7EDF002B0A22 /* TraningProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraningProfileView.h; sourceTree = "<group>"; };
+		646EA6151F4C7EDF002B0A22 /* TraningProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraningProfileView.m; sourceTree = "<group>"; };
+		646EA6171F4C7F0D002B0A22 /* WarmsUpsProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarmsUpsProfileView.h; sourceTree = "<group>"; };
+		646EA6181F4C7F0D002B0A22 /* WarmsUpsProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarmsUpsProfileView.m; sourceTree = "<group>"; };
+		646EA61A1F4C86FA002B0A22 /* LessonsProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonsProfileView.h; sourceTree = "<group>"; };
+		646EA61B1F4C86FA002B0A22 /* LessonsProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonsProfileView.m; sourceTree = "<group>"; };
 		64760D121F3A0E84004629C2 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		64760D131F3A0E84004629C2 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 		64915EDE1F2C6A35007E0B1A /* 05 Happy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "05 Happy.mp3"; sourceTree = "<group>"; };
@@ -286,10 +295,16 @@
 				6428E4C61F49E2A900DDF4F3 /* PitchMeterView.m */,
 				64F712D11F4B383800743205 /* TraningView.h */,
 				64F712D21F4B383800743205 /* TraningView.m */,
+				646EA6141F4C7EDF002B0A22 /* TraningProfileView.h */,
+				646EA6151F4C7EDF002B0A22 /* TraningProfileView.m */,
 				64F712D41F4B385100743205 /* WarmsUpsView.h */,
 				64F712D51F4B385100743205 /* WarmsUpsView.m */,
+				646EA6171F4C7F0D002B0A22 /* WarmsUpsProfileView.h */,
+				646EA6181F4C7F0D002B0A22 /* WarmsUpsProfileView.m */,
 				64F712D71F4B387200743205 /* LessonsView.h */,
 				64F712D81F4B387200743205 /* LessonsView.m */,
+				646EA61A1F4C86FA002B0A22 /* LessonsProfileView.h */,
+				646EA61B1F4C86FA002B0A22 /* LessonsProfileView.m */,
 				64F712DA1F4B38B200743205 /* HomeCell.h */,
 				64F712DB1F4B38B200743205 /* HomeCell.m */,
 			);
@@ -619,8 +634,11 @@
 			files = (
 				64DEE2E91F17BA6C008EB9BE /* ProfileView.m in Sources */,
 				64DEE2EF1F17BB03008EB9BE /* DashboardView.m in Sources */,
+				646EA6161F4C7EDF002B0A22 /* TraningProfileView.m in Sources */,
+				646EA6191F4C7F0D002B0A22 /* WarmsUpsProfileView.m in Sources */,
 				644DE55A1F41F67E00AB3C3E /* FriendListView.m in Sources */,
 				64DEE2EC1F17BA8D008EB9BE /* PlayListView.m in Sources */,
+				646EA61C1F4C86FA002B0A22 /* LessonsProfileView.m in Sources */,
 				640854131F32236700703BF9 /* RecordView.m in Sources */,
 				64DEE2E61F17BA4B008EB9BE /* FBLoginView.m in Sources */,
 				64F712D91F4B387200743205 /* LessonsView.m in Sources */,

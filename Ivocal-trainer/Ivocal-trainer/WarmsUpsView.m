@@ -9,7 +9,8 @@
 #import "WarmsUpsView.h"
 
 @interface WarmsUpsView (){
-    NSMutableArray *WarmsUps;
+    NSMutableArray *WarmsUpsArray;
+    NSMutableDictionary *WarmsUpsDict;
 }
 
 @end
@@ -19,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self navigationController];
-    WarmsUps = [[NSMutableArray alloc]init];
+    WarmsUpsArray = [[NSMutableArray alloc]init];
+    WarmsUpsDict = [[NSMutableDictionary alloc]init];
     // Do any additional setup after loading the view.
 }
 
@@ -50,13 +52,22 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"lessons"];
+    HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"warmupscell"];
     //    cell.titleLbl.text = ;
     //    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:[]
     //                         placeholderImage:[UIImage imageNamed:@"user_cover"]
     //                                completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
     return cell;
 }
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    WarmsUpsDict = [[NSMutableDictionary alloc]initWithDictionary:[WarmsUpsArray objectAtIndex:indexPath.row]];
+    [self performSegueWithIdentifier:@"toprofile" sender:nil];
+}
+
+
 
 
 -(void)getWarmUps{
@@ -73,8 +84,8 @@
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               
               // NSLog(@"getAllSongs  : %@", responseObject);
-              WarmsUps = [[responseObject valueForKey:@"Warmups"] mutableCopy];
-              NSLog(@"WarmsUps  : %@", WarmsUps);
+              WarmsUpsArray = [[responseObject valueForKey:@"Warmups"] mutableCopy];
+              NSLog(@"WarmsUps  : %@", WarmsUpsArray);
               [self.warmsTbl reloadData];
               
               
@@ -97,14 +108,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"toprofile"]) {
+        WarmsUpsProfileView *vc = [segue destinationViewController];
+        vc.warmsUpsDict = [WarmsUpsDict mutableCopy];
+        
+    }
 }
-*/
-
 @end

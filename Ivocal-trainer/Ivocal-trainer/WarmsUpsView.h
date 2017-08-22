@@ -15,6 +15,7 @@
 #import "SVProgressHUD.h"
 #import "utill.h"
 #import "Alerts.h"
+#import "WarmsUpsProfileView.h"
 
 @interface WarmsUpsView : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *warmsTbl;
