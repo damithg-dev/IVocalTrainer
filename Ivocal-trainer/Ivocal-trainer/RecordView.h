@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EZAudio.h"
 #import "UIColor+HexString.h"
+#import "SVProgressHUD.h"
 
 
 @interface RecordView : UIViewController <EZAudioPlayerDelegate, EZMicrophoneDelegate, EZRecorderDelegate,EZAudioFFTDelegate>
@@ -23,8 +24,8 @@
 @property (weak, nonatomic) IBOutlet EZAudioPlot *audiographFileView;
 @property (weak, nonatomic) IBOutlet UILabel *microphoneStateLabel;
 @property(atomic , strong)NSMutableDictionary *songDict;
-@property(atomic , strong)NSMutableArray *noteArray;
-@property(atomic , strong)NSMutableArray *frqArray;
+@property(atomic , strong)NSMutableArray *orgNoteArray;
+@property(atomic , strong)NSMutableArray *orgFrqArray;
 
 @property (nonatomic, strong) EZAudioFile *audioFile;
 

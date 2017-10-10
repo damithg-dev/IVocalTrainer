@@ -93,7 +93,7 @@
           }
           failure:^(AFHTTPRequestOperation *operation, NSError *error) {
               NSLog(@"Error: response%@", operation.response);
-              [Alerts showAlertWithTitle:@"Camera" message:@"It seems that your device doesn't support camera. " controller: self];
+              [Alerts showAlertWithTitle:@"Error" message:@"It seems that your device doesn't Have internet. " controller: self];
 
               [SVProgressHUD dismiss];
             }

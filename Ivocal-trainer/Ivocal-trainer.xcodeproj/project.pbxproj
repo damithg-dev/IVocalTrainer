@@ -18,6 +18,7 @@
 		646EA61C1F4C86FA002B0A22 /* LessonsProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 646EA61B1F4C86FA002B0A22 /* LessonsProfileView.m */; };
 		64760D141F3A0E84004629C2 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 64760D131F3A0E84004629C2 /* UIColor+HexString.m */; };
 		64915EDF1F2C6A35007E0B1A /* 05 Happy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64915EDE1F2C6A35007E0B1A /* 05 Happy.mp3 */; };
+		649C42601F8152D10058E01F /* FriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 649C425F1F8152D10058E01F /* FriendsCell.m */; };
 		64B19B781F19DD490025EA44 /* SongsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B19B771F19DD490025EA44 /* SongsCell.m */; };
 		64DEE2AD1F17B846008EB9BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2AC1F17B846008EB9BE /* main.m */; };
 		64DEE2B01F17B846008EB9BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DEE2AF1F17B846008EB9BE /* AppDelegate.m */; };
@@ -99,6 +100,8 @@
 		64760D121F3A0E84004629C2 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		64760D131F3A0E84004629C2 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 		64915EDE1F2C6A35007E0B1A /* 05 Happy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "05 Happy.mp3"; sourceTree = "<group>"; };
+		649C425E1F8152D10058E01F /* FriendsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsCell.h; sourceTree = "<group>"; };
+		649C425F1F8152D10058E01F /* FriendsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsCell.m; sourceTree = "<group>"; };
 		64B19B761F19DD490025EA44 /* SongsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsCell.h; sourceTree = "<group>"; };
 		64B19B771F19DD490025EA44 /* SongsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsCell.m; sourceTree = "<group>"; };
 		64DEE2A81F17B846008EB9BE /* Ivocal-trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ivocal-trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -334,6 +337,8 @@
 				64DEE2E51F17BA4B008EB9BE /* FBLoginView.m */,
 				644DE5581F41F67E00AB3C3E /* FriendListView.h */,
 				644DE5591F41F67E00AB3C3E /* FriendListView.m */,
+				649C425E1F8152D10058E01F /* FriendsCell.h */,
+				649C425F1F8152D10058E01F /* FriendsCell.m */,
 			);
 			name = "Social media";
 			sourceTree = "<group>";
@@ -511,13 +516,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ivocal-trainerUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7FA07BCF9F1DCF4C8834461F /* [CP] Copy Pods Resources */ = {
@@ -571,13 +579,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ivocal-trainer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CA4DADD9F7B36713C5495AB8 /* [CP] Embed Pods Frameworks */ = {
@@ -586,9 +597,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Ivocal-trainer/Pods-Ivocal-trainer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/EZAudio/EZAudio.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/TPCircularBuffer/TPCircularBuffer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZAudio.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPCircularBuffer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -601,13 +631,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ivocal-trainerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E87810D8BA056514A4A57333 /* [CP] Copy Pods Resources */ = {
@@ -650,6 +683,7 @@
 				64DEE2AD1F17B846008EB9BE /* main.m in Sources */,
 				64B19B781F19DD490025EA44 /* SongsCell.m in Sources */,
 				64E915AA1F38B99C00AFB048 /* utill.m in Sources */,
+				649C42601F8152D10058E01F /* FriendsCell.m in Sources */,
 				645AABAE1F1BA4E000FEA7CD /* SongView.m in Sources */,
 				64DF37BA1F2E0AAE006B0A6F /* WaveView.m in Sources */,
 				64760D141F3A0E84004629C2 /* UIColor+HexString.m in Sources */,

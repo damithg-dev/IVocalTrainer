@@ -16,6 +16,7 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
     float val;
     NSMutableArray *noteArray;
     NSMutableArray *frqArray;
+    NSURL *songPath;
 
 }
 
@@ -32,8 +33,9 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
     [self.audiographView clear];
     self.audiographView.backgroundColor = [UIColor colorWithRed: 0.0 green: 0.0 blue: 0.0 alpha: 0.0];
     self.timeSlider.value = 0.0;
+    [self dowenloadTheSong];
+
     
-    [self initAudioPlayer];
     [self initNavigationBar];
     [self initSongandPlayerBackground];
     noteArray = [[NSMutableArray alloc]init];
@@ -60,15 +62,53 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
 }
 
 
+-(void)dowenloadTheSong{
+    NSURL *URL = [NSURL URLWithString:[self.songDict valueForKey:@"file"]];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
+    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:@"images"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:dataPath])
+        [[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:nil];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded"
+                     forHTTPHeaderField:@"Content-Type"];
+    
+    [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"audio/mpeg", nil];
+    
+    [manager GET:@"http://www.detailsofmylife.net/wp-content/uploads/2010/02/Ellie-Goulding-Starry-Eyed-Live-Lounge-@-Radio-1.mp3"
+      parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             
+             [operation.responseData writeToFile:[dataPath stringByAppendingPathComponent:@"file.mp3"] atomically:YES];
+             NSLog(@"Successfully downloaded file to %@", [NSURL fileURLWithPath:dataPath]); NSLog(@"THE RESPONSE: %@", responseObject);
+             songPath = [NSURL fileURLWithPath:dataPath];
+             NSString *fileName = @"file.mp3";
+             NSString *folderPath = [documentsDirectory stringByAppendingPathComponent:fileName];
+             NSLog(@"THE RESPONSE folderPath: %@", folderPath);
+             songPath = [NSURL URLWithString:folderPath];
+             [self initAudioPlayer];
+             
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"%@", error);
+         }];
+}
+
+
 -(void)initAudioPlayer{
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"05 Happy.mp3" ofType:nil]];
+//    NSURL *url = [NSURL fileURLWithPath:songPath.path];
 
 
     self.player = [EZAudioPlayer audioPlayerWithDelegate:self];
     self.player.shouldLoop = YES;
     
     //audio file
-    self.audioFile = [EZAudioFile audioFileWithURL:url];
+    self.audioFile = [EZAudioFile audioFileWithURL:songPath];
     [self.player setAudioFile:self.audioFile];
     
     //slider
@@ -187,7 +227,7 @@ updatedWithFFTData:(float *)fftData
 {
 
     
-    float maxFrequency = [fft maxFrequency];
+    double maxFrequency = (double)[fft maxFrequency];
     NSString *noteName = [EZAudioUtilities noteNameStringForFrequency:maxFrequency
                                                         includeOctave:YES];
     
@@ -245,8 +285,8 @@ updatedWithFFTData:(float *)fftData
         RecordView *vc = [segue destinationViewController];
         vc.songDict = [self.songDict mutableCopy];
         vc.audioFile = [self.audioFile copy];
-        vc.frqArray = [frqArray mutableCopy];
-        vc.noteArray = [noteArray mutableCopy];
+        vc.orgFrqArray = [frqArray mutableCopy];
+        vc.orgNoteArray = [noteArray mutableCopy];
     }
 }
 

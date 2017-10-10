@@ -7,6 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBSDKCoreKit.h"
+#import "FBSDKLoginKit.h"
+#import "FriendsCell.h"
+#import "utill.h"
+#import "AFNetworking.h"
+#import "SVProgressHUD.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface FriendListView : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *friendsTblView;

@@ -8,11 +8,13 @@
 
 #import "PitchMeterView.h"
 
-static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
+static vDSP_Length const FFTViewControllerFFTWindowSize = 4028;
 
 
 @interface PitchMeterView (){
     BOOL isPressed;
+    NSMutableArray *noteArray;
+    NSMutableArray *frqArray;
 }
 
 
@@ -32,7 +34,9 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    noteArray = [[NSMutableArray alloc]init];
+    frqArray = [[NSMutableArray alloc]init];
 }
 
 
@@ -132,9 +136,20 @@ updatedWithFFTData:(float *)fftData
     
     //    __weak typeof (self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"%@",[NSString stringWithFormat:@"\n Highest Note: %@,\n Frequency: %.2f\n maxFrequencyMagnitude %.2f\n fftdata: %.@f\n  ", noteName, maxFrequency,maxFrequencyMagnitude,[[NSNumber numberWithFloat:* fftData] stringValue]]);
-        if ( 85.0 < maxFrequency < 2550.0) {
+      
+        if ( 85.f < maxFrequency < 550.f) {
+              NSLog(@"%@",[NSString stringWithFormat:@"\n Highest Note: %@,\n Frequency: %.2f\n maxFrequencyMagnitude %.2f\n fftdata: %.@f\n  ", noteName, maxFrequency,maxFrequencyMagnitude,[[NSNumber numberWithFloat:* fftData] stringValue]]);
                     self.pitchLevelLbl.text =[NSString stringWithFormat:@"%.2f Hz", maxFrequency];
+            [frqArray addObject:[NSString stringWithFormat:@"%f",maxFrequency]];
+            [noteArray addObject:noteName];
+            
+            NSNumber * max = [frqArray valueForKeyPath:@"@max.floatValue"];
+            NSUInteger numberIndex1 = [frqArray indexOfObject:max];
+            
+            NSLog(@"Max Value = %d and index = %.2lu",[max intValue],(unsigned long)numberIndex1);
+          
+
+
         }
     });
 }
@@ -185,6 +200,15 @@ updatedWithFFTData:(float *)fftData
 - (IBAction)cancelButtonPresssed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
+-(void)submitThePitchRange{
+
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

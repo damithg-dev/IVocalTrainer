@@ -280,13 +280,16 @@ UInt32 const EZAudioPlotDefaultMaxHistoryBufferLength = 8192;
         {
 #if TARGET_OS_IPHONE
             translateY = CGRectGetHeight(rect);
+                                   // NSLog(@"TARGET_OS_IPHONE translateY %f",translateY);
 #elif TARGET_OS_MAC
             translateY = 0.0f;
 #endif
         }
         else
         {
+//            NSLog(@"halfHeight %f",halfHeight);
             translateY = halfHeight + rect.origin.y;
+//            NSLog(@"translateY %f",translateY);
         }
         xf = CGAffineTransformTranslate(xf, 0.0, translateY);
         double yScaleFactor = halfHeight;

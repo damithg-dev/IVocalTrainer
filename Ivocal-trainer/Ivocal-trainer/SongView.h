@@ -13,7 +13,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "RecordView.h"
 
-
+@import AFNetworking;
 
 
 @interface SongView : UIViewController<EZAudioPlayerDelegate,EZAudioFFTDelegate>

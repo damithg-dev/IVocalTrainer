@@ -60,6 +60,13 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    traningDict = [[NSMutableDictionary alloc]initWithDictionary:[traningArray objectAtIndex:indexPath.row]];
+    [self performSegueWithIdentifier:@"toprofile" sender:nil];
+}
+
+
 
 
 -(void)getAllTranings{
@@ -95,11 +102,6 @@
 }
 
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    traningDict = [[NSMutableDictionary alloc]initWithDictionary:[traningArray objectAtIndex:indexPath.row]];
-    [self performSegueWithIdentifier:@"toprofile" sender:nil];
-}
 
 
 

@@ -17,8 +17,6 @@
 #import "Alerts.h"
 #import "TraningProfileView.h"
 
-
-
 @interface TraningView : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *traningTbl;

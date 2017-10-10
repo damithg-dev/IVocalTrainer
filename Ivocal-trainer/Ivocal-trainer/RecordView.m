@@ -10,7 +10,10 @@
 static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
 
 
-@interface RecordView ()
+@interface RecordView (){
+    NSMutableArray* userNoteArray;
+    NSMutableArray* userFreqArray;
+}
 
 @end
 #define kAudioFilePath @"test.m4a"
@@ -27,9 +30,13 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
 }
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
     [self initMicrphone];
     [self initNavigationBar];
+    
+    userFreqArray = [[NSMutableArray alloc]init];
+    userNoteArray = [[NSMutableArray alloc]init];
 }
 
 -(void)initNavigationBar{
@@ -122,13 +129,57 @@ static vDSP_Length const FFTViewControllerFFTWindowSize = 4096;
 }
 
 - (IBAction)recordStopButtonPressed:(id)sender {
+    [SVProgressHUD show];
     [self.microphone stopFetchingAudio];
     [self.recorder closeAudioFile];
     self.recrdStartPauseBtn.selected = false;
+    
+    
+    [self calculateTheScore];
 }
 - (IBAction)canselButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:true];
 }
+
+
+
+-(void)calculateTheScore{
+    
+    NSMutableArray* under100ArrayNote = [[NSMutableArray alloc]init];
+    NSMutableArray* under100ArrayFreq = [[NSMutableArray alloc]init];
+    NSMutableArray* under10ArrayNote = [[NSMutableArray alloc]init];
+    NSMutableArray* under10ArrayFreq = [[NSMutableArray alloc]init];
+    NSMutableArray* above100ArrayNote = [[NSMutableArray alloc]init];
+    NSMutableArray* above100ArrayFreq = [[NSMutableArray alloc]init];
+    for (int i  = 0; i<userFreqArray.count; i++) {
+        double userfreq = [[userFreqArray objectAtIndex:i] doubleValue];
+        double orgfreq = [[self.orgFrqArray objectAtIndex:i] doubleValue];
+        int varince = (int)(userfreq / orgfreq);
+        NSLog(@"%i",varince);
+        
+        if(varince <10){
+            [under10ArrayFreq addObject:[self.orgFrqArray objectAtIndex:i]];
+            [under10ArrayNote addObject:[self.orgNoteArray objectAtIndex:i]];
+        }else if (varince<100) {
+            [under100ArrayFreq addObject:[self.orgFrqArray objectAtIndex:i]];
+            [under100ArrayNote addObject:[self.orgNoteArray objectAtIndex:i]];
+        }else if (varince>100){
+            [above100ArrayFreq addObject:[self.orgFrqArray objectAtIndex:i]];
+            [above100ArrayNote addObject:[self.orgNoteArray objectAtIndex:i]];
+        }
+    }
+    
+    int goodsingPoints = (int) (under10ArrayFreq.count + (under100ArrayFreq.count / 2));
+    int totalpoints = (int) userFreqArray.count;
+    
+    int score = (int) (goodsingPoints/totalpoints)*10;
+
+    NSLog(@"%i",score);
+    
+    
+    
+}
+
 
 
 #pragma mark - Notifications
@@ -244,7 +295,7 @@ updatedWithFFTData:(float *)fftData
 {
     
     
-    float maxFrequency = [fft maxFrequency];
+    double maxFrequency =(double) [fft maxFrequency];
     NSString *noteName = [EZAudioUtilities noteNameStringForFrequency:maxFrequency
                                                         includeOctave:YES];
 //    if ([[self.frqArray objectAtIndex:i]isEqualToString:[NSString stringWithFormat:@"%f",maxFrequency]]) {
@@ -257,6 +308,8 @@ updatedWithFFTData:(float *)fftData
  
     //    __weak typeof (self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
+        [userFreqArray addObject:[NSString stringWithFormat:@"%f",maxFrequency]];
+        [userNoteArray addObject:noteName];
         NSLog(@"%@",[NSString stringWithFormat:@"Highest Note: %@,\nFrequency: %.2f", noteName, maxFrequency]);
         
         // weakSelf.maxFrequencyLabel.text = [NSString stringWithFormat:@"Highest Note: %@,\nFrequency: %.2f", noteName, maxFrequency];

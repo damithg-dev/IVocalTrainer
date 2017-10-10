@@ -10,6 +10,9 @@
 #import "FBSDKCoreKit.h"
 #import "FBSDKLoginKit.h"
 #import "ProfileView.h"
+#import "utill.h"
+#import "AFNetworking.h"
+#import "SVProgressHUD.h"
 
 @interface FBLoginView : UIViewController
 

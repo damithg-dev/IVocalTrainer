@@ -12,7 +12,7 @@ target 'Ivocal-trainer' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
-  pod 'EZAudio', '~> 1.1.4'
+  pod 'EZAudio'
   pod 'AFNetworking', '~> 2.5'
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
   pod 'SDWebImage', '~>3.8'
